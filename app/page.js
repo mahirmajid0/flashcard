@@ -1,95 +1,63 @@
-import Image from "next/image";
 import styles from "./page.module.css";
+import Link from 'next/link';
 
 export default function Home() {
-  return (
-    <main className={styles.main}>
-      <div className={styles.description}>
-        <p>
-          Get started by editing&nbsp;
-          <code className={styles.code}>app/page.js</code>
-        </p>
-        <div>
-          <a
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{" "}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className={styles.vercelLogo}
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
+  return <>
+
+  <div className="background-div"style={{position: 'absolute', width: '100vw', height: '100vh', backgroundColor: '#C2DFFF'}}>
+  </div>
+
+
+  <div className="main-div" style={{display: 'flex', flexDirection: 'row', backgroundColor: 'green' }}>
+
+    <div className="left-div" style={{display: 'flex', position: 'relative', left: '11vw', width: '20vw', height: '85vh', 
+      flexDirection: 'column'}}>
+        
+      <div className="line-div" style={{height: '80%'}}>
+        <div className="vertical-line" style={{borderLeft: '10px solid green', height: '100%', marginLeft: '97%'}}></div>
+      </div>  
+
+      <div className="button-div" style={{height: '12%', width: '70%'}}>
+        <Link href="/Register" passHref>
+            <button className={styles.flashcardBtn} style={{border: '2px solid black', height: '100%', 
+            position: 'relative', left: '13vw',
+            width: '100%', fontSize: '40px', alignContent: 'center', textAlign: 'center'}}> Sign Up</button> 
+        </Link>
+      </div>
+
+    </div>
+    
+    <div className="center-div" style={{display: 'flex', position: 'relative', left: '15.5vw', width: '30vw', height: '55vh', 
+      flexDirection: 'column'}}>
+        <div className="line-div" style={{display: 'flex', flexDirection: 'row', height: '80%', columnGap: '46%'}}>
+          <div className="vertical-line" style={{borderLeft: '10px solid green', height: '100%', marginLeft: '25%'}}></div>
+          <div className="vertical-line" style={{borderLeft: '10px solid green', height: '100%'}}></div>
         </div>
-      </div>
 
-      <div className={styles.center}>
-        <Image
-          className={styles.logo}
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
-      </div>
+        <div className="button-div" style={{height: '20%'}}>
+            < button style={{border: '2px solid black', height: '100%', backgroundColor: 'tan',
+            width: '100%', fontSize: '40px', alignContent: 'center', textAlign: 'center'}}> AI Flashcard Site</button> 
+        </div>
+    </div>
 
-      <div className={styles.grid}>
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Docs <span>-&gt;</span>
-          </h2>
-          <p>Find in-depth information about Next.js features and API.</p>
-        </a>
+    <div className="right-div" style={{display: 'flex', position: 'relative', left: '20vw', width: '20vw', height: '85vh', 
+      flexDirection: 'column'}}>
+        <div className="line-div" style={{height: '80%'}}>
+          <div className="vertical-line" style={{borderLeft: '10px solid green', height: '100%', marginLeft: '0%'}}></div>
+        </div>
 
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Learn <span>-&gt;</span>
-          </h2>
-          <p>Learn about Next.js in an interactive course with&nbsp;quizzes!</p>
-        </a>
+        <div className="button-div" style={{height: '12%', width: '70%'}}>
+          <Link href="/Login" passHref>
+            < button className={styles.flashcardBtn} style={{border: '2px solid black', height: '100%',
+            position: 'relative', left: '-7vw',
+            width: '100%', fontSize: '40px', alignContent: 'center', textAlign: 'center'}}> Log In</button> 
+          </Link>
+        </div>
 
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Templates <span>-&gt;</span>
-          </h2>
-          <p>Explore starter templates for Next.js.</p>
-        </a>
+    </div>
 
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Deploy <span>-&gt;</span>
-          </h2>
-          <p>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
-      </div>
-    </main>
-  );
+  </div>
+
+
+  </>
 }
